@@ -13,7 +13,13 @@ class RSSDemo extends StatefulWidget {
 
 class _RSSDemoState extends State<RSSDemo> {
 
-  static const RSS_URl = "https://www.cnet.com/rss/android-update/";
+  /*
+  Search Engine Journal - http://feeds.searchengineland.com/searchengineland =>Working
+  Neil Patel - https://neilpatel.com/feed/   => Working
+  Smart Blogger - https://smartblogger.com/blog/feed/   => Working
+   */
+
+  static const RSS_URl = "https://smartblogger.com/blog/feed/"; // Replace with the URL's blogs you need. URL above.
   static const String loadingFeedMsg = "LoadingFeed";
   static const String errorFeedMsg = "ErrorLoadingFeed";
   static const String errorFeedOpen = "ErrorLOpeningFeed";
@@ -89,7 +95,7 @@ class _RSSDemoState extends State<RSSDemo> {
 
   list() {
     return ListView.builder(
-      itemCount: _feed.items!.length,
+      itemCount: 10,
       itemBuilder: (BuildContext context, int index) {
         final item = _feed.items![index];
         return ListTile(
